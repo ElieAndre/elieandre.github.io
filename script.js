@@ -81,6 +81,8 @@ document.querySelectorAll("#intro-title em, .section h2, .contact-section h2, .p
   let frame = 0;
   let glyphs = [];
   let pointer;
+  // Keep each title's digits stable; only their reveal follows the pointer.
+  const binaryDigits = effect === "binary" ? Array.from(text, () => Math.random() < .5 ? "0" : "1") : [];
   const allowed = () => !reducedMotion.matches && finePointer.matches && !document.hidden && !title.closest(".motion-offscreen");
   const reset = () => {
     clearTimeout(timer);
@@ -149,7 +151,7 @@ document.querySelectorAll("#intro-title em, .section h2, .contact-section h2, .p
           letter.textContent = glyph.character;
           const replacement = document.createElement("span");
           replacement.className = effect === "formula" ? "formula-symbol" : "binary-digit";
-          replacement.textContent = effect === "formula" ? [..."∑x²−λ"][index % 5] : (Math.random() < .5 ? "0" : "1");
+          replacement.textContent = effect === "formula" ? [..."∑x²−λ"][index % 5] : binaryDigits[index];
           if (effect === "formula") replacement.dataset.tone = index % 2 ? "green" : "black";
           else replacement.dataset.digit = replacement.textContent;
           cell.append(letter, replacement);
@@ -162,17 +164,6 @@ document.querySelectorAll("#intro-title em, .section h2, .contact-section h2, .p
       const box = title.getBoundingClientRect();
       pointer = event && Number.isFinite(event.clientX) ? {x:event.clientX, y:event.clientY} : {x:box.left + box.width / 2, y:box.top + box.height / 2};
       paintLocal();
-      if (effect === "binary") {
-        const shuffle = () => {
-          if (!allowed()) { reset(); return; }
-          glyphs.filter(glyph => glyph.blend > 0).forEach(glyph => {
-            glyph.replacement.textContent = Math.random() < .5 ? "0" : "1";
-            glyph.replacement.dataset.digit = glyph.replacement.textContent;
-          });
-          timer = setTimeout(shuffle, 240);
-        };
-        timer = setTimeout(shuffle, 240);
-      }
     } else if (effect === "typing") {
       const caret = document.createElement("span");
       caret.className = "typing-caret";
