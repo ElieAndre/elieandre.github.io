@@ -8,6 +8,8 @@
 !/content.js
 !/script.js
 !/style.css
+!/robots.txt
+!/sitemap.xml
 !/assets/
 /assets/*
 !/assets/favicon.svg
