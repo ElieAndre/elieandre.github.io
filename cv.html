@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Elie-Andre Disso's public CV: AI engineering, research experience and selected projects."><title>CV — Elie-Andre Disso</title><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"><script src="script.js" defer></script></head>
+<body><a class="skip" href="#main">Skip to content</a><header class="site-header"><a class="wordmark" href="index.html" aria-label="Elie-Andre, home">e<span class="asterisk" aria-hidden="true">✳</span>a.</a><nav aria-label="Main navigation"><a href="index.html#work">Work</a><a href="index.html#research">Research</a><a href="index.html#writing">Writing</a><a href="cv.html" aria-current="page">CV ↗</a></nav><a class="hello" href="mailto:elie.disso@gmail.com">Say hello ↗</a></header>
+<main id="main" class="cv-page">
+  <section class="cv-intro">
+    <p class="eyebrow">PUBLIC CV / UPDATED OCTOBER 2026</p>
+    <h1>Elie-Andre Disso</h1>
+    <p>Graduate AI Engineer at Fifty One Degrees and PhD researcher in Artificial Intelligence at the University of Westminster. My experience spans Python engineering, language-model evaluation, computer vision and NLP, alongside stakeholder-led AI development and end-to-end personal projects.</p>
+    <div class="cv-actions"><a class="cv-download" href="output/pdf/Elie-Andre-Disso-Public-CV.pdf" download="Elie-Andre-Disso-CV.pdf">Download CV (PDF) ↓</a><button id="print-cv" type="button">Print CV</button><a class="text-link" href="mailto:elie.disso@gmail.com">elie.disso@gmail.com</a></div>
+  </section>
+
+  <section id="cv-experience" class="cv-section" aria-labelledby="cv-experience-title">
+    <h2 id="cv-experience-title">Experience</h2>
+    <article>
+      <p class="cv-meta">FIFTY ONE DEGREES · OCTOBER 2026–PRESENT</p>
+      <h3>Graduate AI Engineer</h3>
+      <p>Applied AI engineering and client delivery, alongside my PhD research.</p>
+    </article>
+    <article>
+      <p class="cv-meta">NATWEST GROUP · JUNE–AUGUST 2026</p>
+      <h3>Engineering Intern</h3>
+      <ul>
+        <li>Contributed to the design and development of an internal AI decision-support tool in an intern Scrum team, translating stakeholder needs into criteria covering cost, scalability and technical risk.</li>
+        <li>Contributed to solution-design diagrams using Visio and learned to set up and use Jira workflows.</li>
+        <li>Proposed a Power BI analytics architecture connecting Copilot Studio, Power Automate and Dataverse to track usage, recurring questions and user feedback. This was a design proposal, not a deployed analytics system.</li>
+        <li>Completed an individual research project on AI-assisted scam prevention, recommending a controlled Outlook add-in or browser-extension pilot for analysing suspicious messages and links.</li>
+        <li>Built a Java application during an engineering activity and ran a Dynamic Application Security Testing scan using OWASP ZAP.</li>
+        <li>Participated in a five-hour Microsoft low-code hackathon involving two teams.</li>
+      </ul>
+      <p class="cv-learning">Engineering learning: Kubernetes and Amazon EKS, Terraform, Helm and GitOps; CI/CD, observability with Grafana and OpenTelemetry, and testing and security practices.</p>
+    </article>
+    <article>
+      <p class="cv-meta">THE ALAN TURING INSTITUTE · JUNE–DECEMBER 2024</p>
+      <h3>Machine Learning Researcher Intern — LLM Systems</h3>
+      <ul>
+        <li>Built automated language-model evaluation workflows using Python and OpenAI APIs.</li>
+        <li>Designed experiments comparing model outputs across summarisation and reasoning tasks, using structured criteria for factuality, relevance and fluency.</li>
+        <li>Investigated prompt optimisation, including few-shot prompting, and analysed outputs to identify recurring failure patterns.</li>
+        <li>Engineered reproducible workflows for comparing outputs across model architectures and prompting approaches.</li>
+      </ul>
+    </article>
+    <article>
+      <p class="cv-meta">UNIVERSITY OF WESTMINSTER · JANUARY 2023–EXPECTED MAY 2027</p>
+      <h3>PhD Researcher — Artificial Intelligence</h3>
+      <ul>
+        <li>Designed and implemented machine-learning pipelines for structured data analysis and prediction.</li>
+        <li>Built predictive models with scikit-learn, including data preprocessing and feature-engineering workflows.</li>
+        <li>Applied statistical validation to assess model reliability and support reproducible experiments.</li>
+        <li>Research interests span computer vision, NLP and machine-learning applications related to food waste.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section id="cv-skills" class="cv-section" aria-labelledby="cv-skills-title">
+    <h2 id="cv-skills-title">Technical skills</h2>
+    <dl class="cv-skills">
+      <dt>Programming</dt><dd>Python, SQL, Bash, R; Java through an internship engineering activity.</dd>
+      <dt>Machine learning</dt><dd>PyTorch, TensorFlow, scikit-learn, Hugging Face, fastai and OpenCV; preprocessing, feature engineering, experimental design and statistical validation.</dd>
+      <dt>Language models</dt><dd>OpenAI and Claude APIs, prompt engineering, model benchmarking, structured evaluation and document-processing workflows.</dd>
+      <dt>Applications &amp; data</dt><dd>REST APIs, Flask, React, Node.js, PostgreSQL, data pipelines and structured extraction.</dd>
+      <dt>Engineering tools</dt><dd>Git, Linux and Docker; Jira and Visio; OWASP ZAP through an internship security-testing activity.</dd>
+      <dt>Platform familiarity</dt><dd>Kubernetes, Amazon EKS, Terraform, Helm, GitOps, CI/CD, Grafana and OpenTelemetry — learning and exposure during the NatWest internship.</dd>
+    </dl>
+  </section>
+
+  <section id="cv-projects" class="cv-section" aria-labelledby="cv-projects-title">
+    <h2 id="cv-projects-title">Selected projects</h2>
+    <article>
+      <p class="cv-meta">COMPUTER VISION · RESEARCH PROTOTYPE</p>
+      <h3>Food-image classification</h3>
+      <p>Implemented a Flask upload endpoint that decodes an image, resizes it to 256 × 256, normalises the pixels and runs inference with a saved Keras model. The local prototype returns a food / non-food prediction as JSON.</p>
+    </article>
+    <article>
+      <p class="cv-meta">COMPUTER VISION · PERSONAL PROJECT</p>
+      <h3>German car classifier</h3>
+      <p>Developed an image-classification experiment with a training notebook, an exported model and an application for trying predictions. The public repository includes the implementation and sample images.</p>
+      <p><a href="https://github.com/ElieAndre/german-car-classifier" target="_blank" rel="noopener noreferrer">View source code ↗</a></p>
+    </article>
+    <article>
+      <p class="cv-meta">LANGUAGE MODELS · PERSONAL PROJECT</p>
+      <h3>LLM-powered document extraction</h3>
+      <p>Built a backend for parsing documents using language models and PDF-processing pipelines. Extracts tables, entities and metadata into structured CSV or SQL outputs, with support for web and PDF ingestion and chunked processing.</p>
+    </article>
+    <article>
+      <p class="cv-meta">LANGUAGE MODELS · RESEARCH PROJECT</p>
+      <h3>Comparative language-model evaluation</h3>
+      <p>Compared proprietary and open-source models on summarisation and reasoning tasks. Used structured criteria for factuality, fluency and contextual relevance, investigated prompting strategies and analysed recurring output failures.</p>
+    </article>
+    <article>
+      <p class="cv-meta">PLATFORM · PRIVATE PROJECT IN DEVELOPMENT</p>
+      <h3>Quant</h3>
+      <p>Developing a modular quantitative research platform spanning market data, strategy experiments, backtesting, portfolio analysis and risk controls. Work includes momentum and mean-reversion strategies, transaction costs and slippage, portfolio metrics and paper-trading workflows.</p>
+      <p class="cv-project-note">Private project in development; public overview only.</p>
+    </article>
+    <article>
+      <p class="cv-meta">PLATFORM · INTERNAL BUSINESS OPERATIONS</p>
+      <h3>Leapmind OS</h3>
+      <p>End-to-end development of an internal CRM and operations platform using React, Node.js, PostgreSQL and Docker. Connects prospect management, communication history, follow-ups and calendar workflows, with role-based permissions and server-side pagination.</p>
+      <p class="cv-project-note">An internal platform; code and business records remain private.</p>
+    </article>
+  </section>
+
+  <section id="cv-education" class="cv-section" aria-labelledby="cv-education-title">
+    <h2 id="cv-education-title">Education and languages</h2>
+    <article><h3>PhD, Artificial Intelligence — in progress</h3><p>University of Westminster · January 2023–expected May 2027</p></article>
+    <article><h3>MSc, Immunology</h3><p>University of Westminster · 2021–2022</p></article>
+    <article><h3>BSc, Biomedical Sciences</h3><p>University of Westminster · 2018–2021</p></article>
+    <article><h3>Languages</h3><p>English and French — native</p></article>
+  </section>
+
+  <section id="cv-contact" class="cv-section" aria-labelledby="cv-contact-title">
+    <h2 id="cv-contact-title">Find me</h2>
+    <p><a href="mailto:elie.disso@gmail.com">elie.disso@gmail.com</a> · <a href="https://www.linkedin.com/in/elie-andre">LinkedIn</a> · <a href="https://github.com/ElieAndre">GitHub</a></p>
+  </section>
+</main>
+<footer class="site-footer"><p>© <span id="year">2026</span> Elie-Andre Disso</p><a href="index.html">← Back to the portfolio</a></footer></body></html>

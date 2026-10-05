@@ -1,0 +1,19 @@
+# Allow-list: accidental personal files are ignored by default.
+*
+!/.gitignore
+!/.nojekyll
+!/README.md
+!/index.html
+!/cv.html
+!/content.js
+!/script.js
+!/style.css
+!/assets/
+/assets/*
+!/assets/favicon.svg
+!/assets/portrait.png
+!/output/
+/output/*
+!/output/pdf/
+/output/pdf/*
+!/output/pdf/Elie-Andre-Disso-Public-CV.pdf
