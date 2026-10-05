@@ -185,6 +185,16 @@ details[open] summary span { transform:rotate(45deg); }
  .timeline-row { grid-template-columns:160px 1fr 15px; gap:18px; } .research-grid { gap:35px; }
 }
 @media(max-width:650px) {
+ /* Mobile Safari can render Unicode arrows/asterisks as coloured emoji.
+    Use font-independent vector masks on mobile; desktop glyphs stay unchanged. */
+ .mobile-symbol .symbol-glyph { display:none; }
+ .mobile-symbol::before { content:""; display:inline-block; width:.82em; height:.82em; vertical-align:-.06em; background:currentColor; -webkit-mask:var(--mobile-icon) center / contain no-repeat; mask:var(--mobile-icon) center / contain no-repeat; }
+ .icon-out,.icon-up-left { --mobile-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 19L19 5M6 5h13v13' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+ .icon-up-left::before { transform:rotate(-90deg); }
+ .icon-up,.icon-down { --mobile-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 20V4M6 10l6-6 6 6' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+ .icon-down::before { transform:rotate(180deg); }
+ .icon-star { --mobile-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2v20M2 12h20M5 5l14 14M5 19L19 5' fill='none' stroke='black' stroke-width='2.2'/%3E%3C/svg%3E"); }
+ .icon-star::before { width:1em; height:1em; vertical-align:-.05em; }
  .site-header,main,.site-footer,.cv-page { width:calc(100% - 40px); }
  .site-header { padding:22px 0; flex-wrap:wrap; gap:20px; } nav { gap:21px; order:3; width:100%; justify-content:space-between; } .hello { margin-left:auto; }
  .hero { padding:45px 0 30px; grid-template-columns:1fr; gap:35px; } h1 { font-size:74px; letter-spacing:-3.5px; } .eyebrow { font-size:9px; letter-spacing:1px; }
